@@ -4,7 +4,7 @@ LDFLAGS = -lssl -lcrypto
 all: cdecrypt
 
 cdecrypt: main.o
-	$(CXX) $(LDFLAGS) main.o -o $@
+	$(CXX) main.o -o $@ $(LDFLAGS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $<
